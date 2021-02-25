@@ -6,13 +6,29 @@
 	<link rel="stylesheet" href="style.css">
 	<script type="text/javascript">
 	
-	function getRequestedPasswordLength () {
-		return document.getElementById('passwordLength').value;
+	function write(text){
+			document.getElementById("result").innerHTML = text;
+		}
+		
+	function getRequestedPasswordLength() {
+		return parseInt(document.getElementById('passwordLength').value);
 	}
 	
-	function generate (){
-		alert (getRequestedPasswordLength ())
+	function randomChar (){
+		var allChars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		var index = Math.floor(Math.random() * Math.floor(allChars.length));
+		return allChars[index];
+	}
 	
+	function generate() {
+		var result = "";
+		var length = getRequestedPasswordLength();
+		
+		for (var i = 0; i < length; i++) {
+			result = result + randomChar();
+		}
+		write (result);
+		
 	}
 	</script>
 	
@@ -30,11 +46,16 @@
 				<div class="box">
 				
 					<p id="info">Здесь вы можете сгенерировать надёжный пароль для любого сайта. <br> Он будет состоять из латинских букв и цифр.</p>
-					<p>Сколько символов должно быть в пароле?</p>
+					<p>Сколько символов должно быть в пароле?</p>  
+					</p>
 					<input type="text" id="passwordLength">
+					<p>Полученный пароль: <p id="result"></p>
 					<br>
-					<a href="#" onClick="generate();" id="button">Сгенерировать</a>				
+					<a href="#" onClick="generate();" id="button">Сгенерировать</a>	
+					
+					
 				</div>
+				
 
 		</div>
 
