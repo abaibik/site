@@ -75,7 +75,7 @@
 
 </div>
 <div class="footer">
-		Copyright &copy; Aleksandra Baibik
+		Copyright &copy; <?php echo date ("Y")?> Aleksandra Baibik
 </div>
 </div>
 
