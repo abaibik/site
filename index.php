@@ -8,11 +8,9 @@
 <body>
 
 <div class="content">
-	<div class="header">
-		<a href="index.html">Главная</a>
-		<a href="puzzle.html">Загадки</a>
-		<a href="guess.html">Угадайка</a>
-	</div>
+<?php
+	include "menu.php";
+?>
 
 	<p><h2>Личный сайт студентки GeekBrains</h2></p>
 
@@ -23,16 +21,16 @@
 			<p>Это сайт, который входит в обучение на курсе от <a href="https://geekbrains.ru">GeekBrains.</a></p>
 			<p>Здесь вы найдёте несколько игр, которые я написала. Я совсем недавно начала программировать, но все игры работают! :)
 			   Удивительно, правда? Мне-то уж точно. Можете проверить сами!</p>
-
-			<p><a href="index.html">Главная</a>
-			<a href="puzzle.html">Загадки</a>
-			<a href="guess.html">Угадайка</a></p>
 			</div>
 		</div>
 </div>
 
+<?php
+	include "menu.php";
+?>
+
 <div class="footer">
-	Copyright &copy; <?php echo ;?> Aleksandra Baibik
+	Copyright &copy; <?php echo date ("Y")?> Aleksandra Baibik
 </div>
 		
 </body>
